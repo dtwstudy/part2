@@ -21,7 +21,8 @@ const List = ({countries}) => {
          <p>area {item.area} </p>
         <p>languages</p>
         <p>{item.languages.ara}</p>
-        <img src={item.flag} />
+        <img src={item.flag} width="200" />
+        <h4>Weather in {item.capital}</h4>
           </li>
         )}
         </ul>
@@ -35,7 +36,7 @@ const List = ({countries}) => {
      
      <ul>
         {countries.map(country =>
-        <li key={country.capital}>{country.country}  </li>
+        <li key={country.capital}>{country.country}  <button type='button' >show</button> </li>
         )}
         </ul>
       </div>
