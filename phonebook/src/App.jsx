@@ -85,18 +85,19 @@ function App() {
      }
      
   }
-  const deleteData = (id) =>{
-    Phonebook.deletePerson(id).then(deleteUser=>{
-     const newPersons = persons.filter((person)=> person.id !== id)
+  const deleteData = (user) =>{
+
+    Phonebook.deletePerson(user.id).then(deleteUser=>{
+     const newPersons = persons.filter((person)=> person.id !== user.id)
      setPersons(newPersons)
     }).catch(err=>{
-      setErrorMessage(`Infromation of  has alredy been removed from server`)
+      setErrorMessage(`Infromation of ${user.name}  has alredy been removed from server`)
        setCls('error')
        setTimeout(() => {
         setErrorMessage("")
         setCls("")
       }, 2000)
-      console.log("cant delete")
+      console.log("user alredy deleted")
     })
      
   }

@@ -1,7 +1,7 @@
 const Persons = ({persons,onDelete}) => {
     const deletePerson = (person) =>{
      const ask =  confirm(`Delete ${person.name} `)
-    if(ask) onDelete(person.id)
+    if(ask) onDelete(person)
     }
     return (
          <div>
