@@ -21,7 +21,7 @@ const Weather = ({ item }) => {
     <div>
       <h4>Weather in {item.capital}</h4>
 
-      <p>temperature {(data.temp - 273).toFixed()}</p>
+      <p>temperature {(data.temp - 273).toFixed(2)} Celcius</p>
       <img src={data.img} />
       <p>wind {data.wind} m/s</p>
     </div>
